@@ -33,26 +33,6 @@ h3 {
   font-size: 16px;
 }
 
-.sentiment .positive {
-  color: #66cc33;
-}
-
-.sentiment .very-positive {
-  color: #33cc66;
-}
-
-.sentiment .neutral {
-  color: #000099;
-}
-
-.sentiment .negative {
-  color: #993300;
-}
-
-.sentiment .very-negative {
-  color: #cc3300;
-}
-
 footer {
   font-size: 80%;
   text-align: right;
@@ -86,4 +66,9 @@ footer {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 3px;
+}
+
+.big-star {
+  font-size: 40px;
+  color: #eed726;
 }

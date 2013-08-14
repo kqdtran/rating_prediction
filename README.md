@@ -1,5 +1,4 @@
-text-sentiment
-==============
+rating_prediction
+=================
 
-Text sentiment analysis with TextBlob
-
+guess a customer's rating from their review   

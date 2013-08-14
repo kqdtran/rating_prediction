@@ -3,12 +3,12 @@
 <div class="row">
   <div class="col-lg-8 col-offset-2">
     <form id="main-text" class="margin-base-vertical">
-      <h1 class="margin-base-vertical">Analyze Your Text</h1>
+      <h1 class="margin-base-vertical">Customer Reviews Prediction</h1>
       <p>
-        <textarea name="text" class="form-control" rows="15" placeholder="Enter some text"></textarea>
+        <textarea name="text" class="form-control" rows="15" placeholder="Enter a review"></textarea>
       </p>
       <p class="text-center">
-        <button id="analyzeSentiment" type="submit" class="btn btn-success btn-large">Analyze</button>
+        <button id="analyzeStar" type="submit" class="btn btn-success btn-large">Predict the Rating</button>
       </p>
     </form>
   </div>
@@ -19,27 +19,8 @@
     <div class="panel">
       <div class="sentiment" id="sentimentPanel">
         <span>
-          <h3>Sentiment: <span id="sentimentValue"></span></h3> 
-          <!-- <span id="breakdown" style="display: none">
-            <button type="button" class="btn btn-default btn-sm" id="breakdownBtn" href="#">Show Details</button>
-          </span> -->
+          <h3>This review would most likely receive:  <span id="starRating"></span></h3> 
         </span>
-
-        <span>
-          <h3>Subjectivity: <span id="subjectivityValue"></span></h3> 
-        </span>
-
-        <div id="sentencesSentiment" style="display: none">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <td>Sentence</td>
-                <td>Sentiment</td>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
       </div><!-- end sentiment -->
     </div>
   </div><!-- end col -->
