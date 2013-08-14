@@ -1,29 +1,47 @@
 {% extends "_layouts/base.html" %}
 {% block content %}
-  <div class="hero-unit">
-    <h1>Hello, world!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.</p>
-      <p><a class="btn btn-primary btn-large">Learn more »</a></p>
-    </div>
+<div class="row">
+  <div class="col-lg-8 col-offset-2">
+    <form id="main-text" class="margin-base-vertical">
+      <h1 class="margin-base-vertical">Analyze Your Text</h1>
+      <p>
+        <textarea name="text" class="form-control" rows="15" placeholder="Enter some text"></textarea>
+      </p>
+      <p class="text-center">
+        <button id="analyzeSentiment" type="submit" class="btn btn-success btn-large">Analyze</button>
+      </p>
+    </form>
+  </div>
+</div><!-- end row -->
 
-    <div class="row">
-      <div class="span4">
-        <h2>Cool feature</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div>
-      <div class="span4">
-        <h2>Another Feature</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div>
-      <div class="span4">
-        <h2>Another Feature</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div>
-    </div><!-- end row -->
+<div class="row">
+  <div class="col-lg-8 col-offset-2">
+    <div class="panel">
+      <div class="sentiment" id="sentimentPanel">
+        <span>
+          <h3>Sentiment: <span id="sentimentValue"></span></h3> 
+          <!-- <span id="breakdown" style="display: none">
+            <button type="button" class="btn btn-default btn-sm" id="breakdownBtn" href="#">Show Details</button>
+          </span> -->
+        </span>
+
+        <span>
+          <h3>Subjectivity: <span id="subjectivityValue"></span></h3> 
+        </span>
+
+        <div id="sentencesSentiment" style="display: none">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <td>Sentence</td>
+                <td>Sentiment</td>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div><!-- end sentiment -->
+    </div>
+  </div><!-- end col -->
+</div><!-- end row -->
 {% endblock %}

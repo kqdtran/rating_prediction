@@ -1,8 +1,14 @@
 .DS_Store
 *.pyc
 *.pyo
-env
-env*
+
+venv
+venv*
+
+Procfile.dev
+fabfile.py
+requirements
+
 dist
 *.egg
 *.egg-info
